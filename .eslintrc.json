@@ -20,6 +20,12 @@
       "import/no-unresolved": "off",
       "no-restricted-syntax": "off",
       "import/extensions": "off",
-      "no-undef": "off"
+      "no-undef": "off",
+      "no-use-before-define": "off",
+      "no-await-in-loop": "off",
+      "new-cap": "off",
+      "eqeqeq": "off",
+      "class-methods-use-this": "off",
+      "max-classes-per-file": "off"
   }
 }
