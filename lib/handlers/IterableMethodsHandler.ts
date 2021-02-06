@@ -9,26 +9,23 @@ function IterableMethodsFactory<T, E = Error>(
 ) {
   return class {
     handle(pathData, path) {
-      return function (parameterFunction: Function, memo?: any) {
-        return new Promise((resolve, reject) => {
-          asyncFunction(
-            path,
-            memo ?? (async (item, callback: async.AsyncResultCallback<Error>) => {
-              // console.log('inside async function call', item, parameterFunction(item));
-              const result = await parameterFunction(item);
-              callback(null, result);
-            }),
-            (err, res) => {
-              console.log('inside callback', err, res);
-              if (err) {
-                reject(err);
-              } else {
-                resolve(res);
-              }
-            },
-          );
-        });
-      };
+      return (parameterFunction: Function, memo?: any) => new Promise((resolve, reject) => {
+        asyncFunction(
+          path,
+          memo ?? (async (item, callback: async.AsyncResultCallback<Error>) => {
+            // console.log('inside async function call', item, parameterFunction(item));
+            const result = await parameterFunction(item);
+            callback(null, result);
+          }),
+          (err, res) => {
+            if (err) {
+              reject(err);
+            } else {
+              resolve(res);
+            }
+          },
+        );
+      });
 
       // return (parameterFunction: Function, memo?: any) => asyncFunction(
       //   path, memo ?? ((item) => {
