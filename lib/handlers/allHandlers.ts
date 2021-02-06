@@ -56,8 +56,8 @@ export default {
   mapLimit: new IterableMethods.mapLimit(),
   mapSeries: new IterableMethods.mapSeries(),
 
-  reduce: new IterableMethods.reduce(),
-  reduceRight: new IterableMethods.reduceRight(),
+  // reduce: new IterableMethods.reduce(),
+  // reduceRight: new IterableMethods.reduceRight(),
 
   reject: new IterableMethods.reject(),
   rejectLimit: new IterableMethods.rejectLimit(),
@@ -86,7 +86,7 @@ function subjectToComponentsHandler(component: 'namespace' | 'fragment' | 'prefi
         const ns = /^[^]*[#/]/.exec(subject.value)?.[0];
         const pref = ns ? prefixes[ns] : undefined;
         try {
-          // TODO: Get prefixes from the engines first (if possible)
+          // TODO: Get prefixes from the context & engines first (if possible)
           const prefix = pref ?? /[a-z]*$/i.exec((await fetch(`http://prefix.cc/reverse?uri=${ns}`)).url)?.[0] ?? undefined;
           // eslint-disable-next-line no-unused-expressions, no-param-reassign
           ns && prefix && (prefixes[ns] = prefix);

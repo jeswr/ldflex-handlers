@@ -26,6 +26,8 @@
       "new-cap": "off",
       "eqeqeq": "off",
       "class-methods-use-this": "off",
-      "max-classes-per-file": "off"
+      "max-classes-per-file": "off",
+      "no-underscore-dangle": "off",
+      "no-unused-vars": "off"
   }
 }

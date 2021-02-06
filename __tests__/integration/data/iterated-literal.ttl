@@ -1,0 +1,7 @@
+@prefix : <http://example.org/> .
+
+:Armin :literalAttribute 10, 12, 6, 1 ;
+  :anotherAttribute 1, 2, 3, 4, 5 .
+
+:Jesse :literalAttribute 1, 3, 7, 2, 9, 4 ;
+  :anotherAttribute 10, 12, 2, 4 .
