@@ -1,6 +1,6 @@
 {
   "name": "@jeswr/ldflex-handlers",
-  "version": "0.0.0-development",
+  "version": "1.0.2",
   "description": "Custom handlers for use with LDflex",
   "main": "dist/index.js",
   "types": "dist/index.d.js",

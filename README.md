@@ -14,5 +14,5 @@ const myPath = new PathFactory({
 });
 ```
 
-All exposed handlers are declared [here](https://github.com/jeswr/ldflex-handlers/blob/beta/lib/handlers/allHandlers.ts)
+All exposed handlers are declared [here](https://github.com/jeswr/ldflex-handlers/blob/main/lib/handlers/allHandlers.ts)
 
