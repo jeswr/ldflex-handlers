@@ -9,5 +9,3 @@ Object.assign(defaultHandlers, ldflex.defaultHandlers);
 export {
   defaultHandlers,
 };
-
-export * from './handlers/IterableMethodsHandler';

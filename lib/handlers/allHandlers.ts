@@ -1,4 +1,4 @@
-import * as IterableMethods from './IterableMethodsHandler';
+import AsyncIterationHandlers from '@ldflex/async-iteration-handlers';
 
 export class PredicatesOf { // TOFO PROPERLy
   handle(pathData) {
@@ -35,39 +35,7 @@ export default {
   fragments: handler((_, path) => path.toArray((subject) => subjectToComponentsHandler('fragment').handle({ subject }))),
 
   // Further async/iteration helpers
-  every: new IterableMethods.every(),
-  everyLimit: new IterableMethods.everyLimit(),
-  everySeries: new IterableMethods.everySeries(),
-
-  // TODO: Improve this by handling as much as possible in sparql query
-  filter: new IterableMethods.filter(),
-  filterLimit: new IterableMethods.filterLimit(),
-  filterSeries: new IterableMethods.filterSeries(),
-
-  find: new IterableMethods.find(),
-  findLimit: new IterableMethods.filterLimit(),
-  findSeries: new IterableMethods.filterSeries(),
-
-  forEach: new IterableMethods.forEach(),
-  forEachLimit: new IterableMethods.forEachLimit(),
-  forEachSeries: new IterableMethods.forEachSeries(),
-
-  map: new IterableMethods.map(),
-  mapLimit: new IterableMethods.mapLimit(),
-  mapSeries: new IterableMethods.mapSeries(),
-
-  // reduce: new IterableMethods.reduce(),
-  // reduceRight: new IterableMethods.reduceRight(),
-
-  reject: new IterableMethods.reject(),
-  rejectLimit: new IterableMethods.rejectLimit(),
-  rejectSeries: new IterableMethods.rejectSeries(),
-
-  some: new IterableMethods.some(),
-  someLimit: new IterableMethods.someLimit(),
-  someSeries: new IterableMethods.someSeries(),
-
-  transform: new IterableMethods.transform(),
+  ...AsyncIterationHandlers,
 };
 
 // Creates a handler from the given function

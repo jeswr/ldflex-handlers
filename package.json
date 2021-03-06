@@ -81,6 +81,7 @@
     ]
   },
   "dependencies": {
+    "@ldflex/async-iteration-handlers": "^1.0.0",
     "async": "^3.2.0",
     "ldflex": "^2.12.0"
   }
