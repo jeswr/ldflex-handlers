@@ -1,3 +1,6 @@
+## ⚠️ Most handlers exported by this library are now available [here](https://github.com/LDflex/async-iteration-handlers)
+
+
 # ldflex handlers
 My custom handlers for use with the [LDflex](https://github.com/ldflex/ldflex) Library
 
